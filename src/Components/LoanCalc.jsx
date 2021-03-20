@@ -66,7 +66,7 @@ export default function LoanCalc({ title, interest }) {
 
   useEffect(() => {
     setCalculated(calculateResults(loanAmount, interest, years))
-  }, [years, loanAmount])
+  }, [years, loanAmount, interest])
 
   const marks = [
     {
