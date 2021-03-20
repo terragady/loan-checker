@@ -23,37 +23,6 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.loan-slider {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-}
-
-.loan-amount {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-title {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 3rem;
-  color: rgb(0, 0, 0);
-  text-shadow: 1px 1px 1px rgb(142, 190, 190);
-
-}
-
-.loan-results {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
-.loan-results-row {
-  font-family: 'Poppins', sans-serif;
-color:rgba(0, 0, 0, 0.76);
-  display: flex;
-  justify-content: space-between;
-}
-
 .footer {
   position: fixed;
   left: 0;

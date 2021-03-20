@@ -1,3 +1,4 @@
+import './LoanCalc.css'
 import React, { useEffect } from "react";
 import NumberFormat from "react-number-format";
 import { TextField, InputAdornment, Slider } from "@material-ui/core/";
@@ -50,7 +51,6 @@ const calculateResults = (amount = 1, interest, years) => {
   return;
 };
 
-
 export default function LoanCalc({ title, interest }) {
   const [loanAmount, setLoanAmount] = React.useState(null);
   const [years, setYears] = React.useState(20);
@@ -69,18 +69,9 @@ export default function LoanCalc({ title, interest }) {
   }, [years, loanAmount, interest])
 
   const marks = [
-    {
-      value: 5,
-      label: '5',
-    },
-    {
-      value: 20,
-      label: '20 years',
-    },
-    {
-      value: 35,
-      label: '35',
-    },
+    { value: 5, label: '5', },
+    { value: 20, label: '20 years', },
+    { value: 35, label: '35', },
   ];
 
   return (
@@ -114,7 +105,7 @@ export default function LoanCalc({ title, interest }) {
         />
       </div>
       <div className="loan-results">
-      <div className="loan-results-row">
+        <div className="loan-results-row">
           <div>Interest Rate:</div>
           <div>3.5%</div>
         </div>
@@ -130,7 +121,6 @@ export default function LoanCalc({ title, interest }) {
           <div>Total Interest:</div>
           <div><NumberFormat value={Math.ceil(calculated.totalInterest)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
         </div>
-
       </div>
     </>
   );
