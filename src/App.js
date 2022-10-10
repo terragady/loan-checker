@@ -8,7 +8,7 @@ function App() {
       <div className="loan-calc">
         <LoanCalc title="Housing Loan Calculator" interest="3.5" />
       </div>
-      <div className="footer">©Marcin Michalik for Visma  <a href="https://github.com/terragady/visma-test" target="_blank" rel="noreferrer"><GitHubIcon /></a></div>
+      <div className="footer">©Marcin Michalik <a href="https://github.com/terragady/visma-test" target="_blank" rel="noreferrer"><GitHubIcon /></a></div>
     </div>
   );
 }
