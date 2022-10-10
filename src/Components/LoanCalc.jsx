@@ -1,7 +1,7 @@
 import './LoanCalc.css'
 import React, { useEffect } from "react";
 import { NumericFormat } from 'react-number-format';
-import { TextField, InputAdornment, Slider } from "@material-ui/core/";
+import { TextField, InputAdornment, Slider, FormLabel } from "@material-ui/core/";
 
 
 // it generates nice numbers with thousands separators
@@ -19,11 +19,10 @@ function inputFormatter(props) {
           }
         });
       }}
-      thousandSeparator
-      isNumericString
+      thousandSeparator={true}
       isAllowed={(inputObj) => {
         const { value } = inputObj;
-        if (value <= 500000000) return inputObj;
+        if (value <= 10000000001) return inputObj;
       }}
     />
   );
@@ -57,7 +56,7 @@ export default function LoanCalc({ title, interest }) {
   const [calculated, setCalculated] = React.useState(0);
 
   const handleChangeLoan = (event) => {
-    setLoanAmount(event.target.value);
+    setLoanAmount(parseInt(event.target.value));
   };
 
   const handleYearsChange = (event, value) => {
@@ -82,6 +81,7 @@ export default function LoanCalc({ title, interest }) {
       <div className="loan-amount">
         <TextField
           label="Loan amount"
+          placeholder='1,000,000'
           value={loanAmount}
           onChange={handleChangeLoan}
           name="loan-amount"
@@ -93,6 +93,7 @@ export default function LoanCalc({ title, interest }) {
         />
       </div>
       <div className="loan-slider">
+        {/* <FormLabel>Loan term</FormLabel> */}
         <Slider
           min={5}
           draggable="on"

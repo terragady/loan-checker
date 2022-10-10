@@ -1,6 +1,8 @@
 .loan-slider {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
   margin-top: 5rem;
 }
 
@@ -14,7 +16,6 @@
   margin-bottom: 3rem;
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 1px rgb(142, 190, 190);
-
 }
 
 .loan-results {
@@ -24,7 +25,7 @@
 
 .loan-results-row {
   font-family: 'Poppins', sans-serif;
-color:rgba(0, 0, 0, 0.76);
+  color: rgba(0, 0, 0, 0.76);
   display: flex;
   justify-content: space-between;
 }
