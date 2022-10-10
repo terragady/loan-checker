@@ -1,7 +1,7 @@
 import './LoanCalc.css'
 import React, { useEffect } from "react";
 import { NumericFormat } from 'react-number-format';
-import { TextField, InputAdornment, Slider, FormLabel } from "@material-ui/core/";
+import { TextField, InputAdornment, Slider } from "@material-ui/core/";
 
 
 // it generates nice numbers with thousands separators
