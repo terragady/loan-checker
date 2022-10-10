@@ -1,6 +1,6 @@
 import './LoanCalc.css'
 import React, { useEffect } from "react";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from 'react-number-format';
 import { TextField, InputAdornment, Slider } from "@material-ui/core/";
 
 
@@ -8,7 +8,7 @@ import { TextField, InputAdornment, Slider } from "@material-ui/core/";
 function inputFormatter(props) {
   const { inputRef, onChange, ...other } = props;
   return (
-    <NumberFormat
+    <NumericFormat
       {...other}
       getInputRef={inputRef}
       onValueChange={(values) => {
@@ -111,15 +111,15 @@ export default function LoanCalc({ title, interest }) {
         </div>
         <div className="loan-results-row">
           <div>Monthly Payment:</div>
-          <div><NumberFormat value={Math.ceil(calculated.monthlyPayment)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
+          <div><NumericFormat value={Math.ceil(calculated.monthlyPayment)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
         </div>
         <div className="loan-results-row">
           <div>Total Payment:</div>
-          <div><NumberFormat value={Math.ceil(calculated.totalPayment)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
+          <div><NumericFormat value={Math.ceil(calculated.totalPayment)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
         </div>
         <div className="loan-results-row">
           <div>Total Interest:</div>
-          <div><NumberFormat value={Math.ceil(calculated.totalInterest)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
+          <div><NumericFormat value={Math.ceil(calculated.totalInterest)} displayType={'text'} thousandSeparator={true} suffix={' NOK'} /></div>
         </div>
       </div>
     </>
